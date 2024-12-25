@@ -1,0 +1,818 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing:border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Define light and dark mode colors */
+:root {
+    --background-light: #fff;
+    --text-light: #080808;
+    --primary-light: #6A2DFF;
+
+    --background-dark: #121212;
+    --text-dark: #f5f5f5; 
+    --primary-dark: #bb86fc;
+}
+
+
+body {
+    background: var(--background-light);  
+    color: var(--text-light);  
+}
+
+nav {
+    background-color: rgba(168, 144, 255, 0.115);  
+    color: var(--text-light);  
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1000;
+    padding: 0px 20px;
+}
+
+
+body.dark-mode {
+    background: var(--background-dark); 
+    color: var(--text-dark);  
+}
+
+nav.dark-mode {
+    background-color: rgba(168, 144, 255, 0.115);  
+    color: var(--text-dark);  
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1000;
+    padding: 0px 20px;
+}
+ 
+nav ul li a {
+    color: var(--text-light);
+}
+
+nav.dark-mode ul li a {
+    color: var(--text-dark); 
+}
+
+nav ul li a:hover {
+    color: var(--primary-light); 
+}
+
+
+.header-text, .about-text, .name {
+    color: var(--text-light);
+}
+
+body.dark-mode .header-text, body.dark-mode .about-text, body.dark-mode  {
+    color: var(--text-dark);
+}
+
+#typed-text span {
+    background: linear-gradient(45deg, #6A2DFF, #9B4DFF, #00FFFF);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 4px rgba(213, 0, 255, 0.4);
+    text-transform: uppercase;
+}
+
+
+.about-text, .sub-title, .tab-links, .tab-contents, .contact-left, .contact-right {
+    color: var(--text-light);
+}
+
+body.dark-mode .about-text, body.dark-mode .sub-title, body.dark-mode .tab-links, body.dark-mode .tab-contents, body.dark-mode .contact-left, body.dark-mode .contact-right {
+    color: var(--text-dark);
+}
+
+
+.btn, .btn2 {
+    color: var(--text-light); 
+}
+
+ body.dark-mode .btn {
+    color: var(--text-dark); 
+}
+
+body.dark-mode #about p {
+    color: var(--text-dark); 
+}
+body.dark-mode #contact a {
+    color: var(--text-dark); 
+}
+
+body.dark-mode #home a {
+    color: var(--text-dark); 
+}
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/lizabg.png);
+    background-position: right center; 
+    background-repeat: no-repeat;  
+    background-size: contain;   
+}
+
+
+
+.container{
+
+    padding: 10px 10%;
+    
+}
+
+
+.logo{
+    width: 140px;
+    
+}
+
+
+nav ul li{
+    display:inline-block;
+    list-style:none;
+    margin:10px 20px;
+}
+
+nav ul li a{
+
+    color:#080808; 
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+}
+
+nav ul li a::after{
+
+    content:'';
+    width:0;
+    height:3px;
+    background: #6A2DFF;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:0.5s;
+}
+nav ul li a:hover {
+    color: #6A2DFF; /* Violet hover effect */
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    position: relative;  /* Add this to enable absolute positioning of button */
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #6A2DFF;
+    padding: 10px 20px;
+    color:#080808;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0; /* Ensure space around the button */
+}
+
+.about-text {
+    font-size: 24px;  /* Adjust as needed */
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    color: #080808;
+    display: flex;
+}
+
+#typed-text {
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+#typed-text span{
+    background: linear-gradient(45deg, #6A2DFF, #9B4DFF, #00FFFF); /* Subtle pink with #9B4DFF between purple and cyan */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    color: transparent; /* Makes the text transparent to show the gradient */
+    font-weight: bold; /* Bold text for emphasis */
+    font-size: 24px; /* Adjust size as needed */
+    text-shadow: 0 0 4px rgba(213, 0, 255, 0.4); /* Soft pinkish glow */
+    text-transform: uppercase;
+
+}
+
+
+ .name {
+    background: linear-gradient(45deg, #6A2DFF, #9B4DFF, #00FFFF); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    font-weight: bold; 
+    font-size: 48px; 
+    text-shadow: 0 0 4px rgba(213, 0, 255, 0.4); 
+    font-size: 60px;
+    margin-top: 20px;
+}
+.emoji {
+    font-size: 50px; 
+    margin-left: 10px; 
+    display: inline-block; 
+    animation: waveHi 1.5s ease-in-out infinite; /* Animation for the emoji */
+}
+
+/* Keyframe animation to simulate a waving motion */
+@keyframes waveHi {
+    0% {
+        transform: translateX(0) rotate(0deg); /*  default position */
+    }
+    25% {
+        transform: translateX(5px) rotate(10deg); /* right with a small tilt */
+    }
+    50% {
+        transform: translateX(0) rotate(0deg); /*  default position */
+    }
+    75% {
+        transform: translateX(-5px) rotate(-10deg); /* left with a small tilt */
+    }
+    100% {
+        transform: translateX(0) rotate(0deg); /*  original position */
+    }
+}
+
+
+
+/* ------------about-------------*/
+
+#about{
+    padding:80px;
+    color: #080808;
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+
+    width:100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+
+    flex-basis: 60%;
+}
+
+.sub-title{
+
+    font-size: 60px;
+    font-weight: 600;
+    color:#080808;
+}
+
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+}
+
+.tab-links{
+    margin-right:50px;
+    font-size: 18px;
+    font-weight:500 ;
+    cursor: pointer;
+    position:relative;
+
+}
+
+.tab-links span{
+    background: linear-gradient(45deg, #6A2DFF, #9B4DFF, #00FFFF); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    font-weight: bold; 
+    font-size: 24px; 
+    text-shadow: 0 0 4px rgba(213, 0, 255, 0.4); 
+    text-transform: uppercase;
+}
+
+.tab-links::after{
+
+    content:'';
+    width:0;
+    height:3px;
+    background:#6A2DFF;
+    position:absolute;
+    left:0;
+    bottom: -8px;
+    transition:0.5s;
+}
+
+.tab-links.active-link::after{
+    width:50%;
+}
+
+.tab-contents ul li {
+
+    list-style:none;
+    margin:10px 0;
+
+}
+
+.tab-contents ul li span{
+    color:#6A2DFF;
+    font-weight: bold; 
+    font-size:14px;
+
+}
+
+.tab-contents {
+    display:none;
+}
+
+.tab-contents.active-tab{
+
+    display:block;
+}
+
+/*---------------------------skills------------------*/
+
+#skills img {
+    width: 70px; 
+    height: 70px; 
+    object-fit: contain; 
+    margin: 10px; 
+    border-radius: 8px; /* Adding rounded corners for a smoother look */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease; 
+}
+
+
+#skills img:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 255, 255, 0.6); 
+    transform: scale(1.1); /* Adding a zoom effect on hover */
+}
+
+#skills ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; /* Increasing the gap for better spacing */
+    justify-content: center; /* Centering the items */
+}
+
+#skills ul li {
+    display: inline-block; 
+    padding: 5px; 
+}
+
+
+/* ------------portfolio-------------*/
+
+#portfolio{
+    padding:50px 0px;
+
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:10px;
+}
+
+.work{
+
+    border-radius: 10px;
+    position:relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%; 
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; 
+    transition: transform 0.5s;
+}
+
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(45deg, rgba(106, 45, 255, 0.7), rgba(155, 77, 255, 0.7), rgba(0, 255, 255, 0.7)); /* Transparent gradient */
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: height 0.5s, background 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.layer:hover {
+    opacity: 0.95; 
+    background: linear-gradient(45deg, rgba(106, 45, 255, 0.8), rgba(155, 77, 255, 0.8), rgba(0, 255, 255, 0.8)); /* Slightly more vibrant gradient */
+}
+
+.layer h3 {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #080808; 
+    margin-bottom: 20px; 
+    text-transform: capitalize; 
+}
+
+.layer p {
+    font-size: 16px; 
+    font-weight: normal; 
+    color: #080808;
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+.layer span{
+
+    font-weight: bold; 
+    color: #080808; 
+}
+.layer a{
+
+    margin-top:20px;
+    color:#8A4CA8;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    text-align: center;
+}
+
+.work:hover img{
+
+    transform:scale(1.1);
+}
+
+.work:hover .layer{
+    height:100%;
+}
+
+.btn{
+    display: block;
+    margin:50px auto;
+    width:fit-content;
+    border:1px solid #6A2DFF;
+    padding:14px 50px;
+    border-radius:6px;
+    text-decoration: none;
+    color:#080808;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #6A2DFF;
+
+}
+
+
+/* ------------Contact-------------*/
+.contact-left{
+
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+  
+}
+
+.contact-left p i{
+    margin-right: 15px;
+    font-size: 25px;
+    color:#6A2DFF;
+  
+
+}
+.contact-left p a{
+    text-decoration: none;
+    color:#080808;
+  
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: rgba(171, 171, 171, 0.8); 
+    display: inline-block;
+    transition: transform 0.5s, color 0.3s, box-shadow 0.3s ease; 
+}
+
+.social-icons a:hover {
+    color: #fff; 
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    background: linear-gradient(45deg, #6A2DFF, #9B4DFF, #00FFFF); 
+    padding: 10px; 
+    border-radius: 50%; 
+}
+
+
+.contact-right form{
+    width:100%;
+}
+
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: #f1f1f1;
+    padding: 15px;
+    margin: 15px 0;
+    color:#080808;
+    font-size:18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding:14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+footer{
+    width:100%;
+    text-align:center ;
+    padding: 0;
+    background: #080808;
+    font-weight: 300;
+    margin-top: 20px;
+    color:#fff;
+}
+
+/*---------------------css for small screens-------------------*/
+/* Default styles for small screens */
+nav i.fa-bars, nav .fa-xmark {
+    display: none;  /* Hide by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: #282828;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        background-color: transparent;  /* Remove background color */
+    }
+
+    /* The sidebar (sidemenu) when it's hidden off-screen */
+    #sidemenu {
+        position: fixed;
+        top: 0;
+        right: -200px;  /*  hide the sidemenu */
+        width: 200px;
+        height: 100vh;
+        background-color: rgba(168, 144, 255, 0.8); 
+        transition: right 0.5s ease-in-out;
+        padding-top: 50px;
+        z-index: 2; /*  sidemenu is behind the hamburger icon */
+    }
+
+    /*  the sidemenu in open state */
+    #sidemenu.open {
+        right: 0; /* Slide it in */
+    }
+
+    /* Hamburger menu on the right side */
+        nav i.fa-bars, nav .fa-xmark {
+        display: block;  /* Show for small screens */
+        position: absolute;
+        top: 20px;
+        right: 20px; /* Position to the right */
+        z-index: 1001; /* above the sidemenu */
+    }
+
+    /* Close icon */
+    nav .fa-xmark {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 1002; /*above the sidemenu */
+    }
+
+    /* Menu items inside the sidemenu */
+    nav ul li {
+        margin: 25px 0;
+        display: block;
+        color: #fff; 
+    }
+
+    /* Adjust the header text and sections for small screens */
+    .header-text {
+        margin-top: 100%; 
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .sub-title {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;     
+        justify-content: center;
+    }
+
+    .btn.btn2 {
+        width: 80%; 
+        margin-top: 20px; 
+    }
+
+    
+    .about-section img {
+        width: 80%;  
+        margin-bottom: 20px; 
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+
+/*---------------------css for tablets-------------------*/
+/* Apply this for tablets (min-width: 601px, max-width: 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* Header text adjustments for tablets */
+
+    nav{
+        position: absolute;
+    }
+    
+    .header-text {
+        margin-top:40%; 
+        font-size: 24px;
+        width: 80%; 
+        max-width: 225px; 
+        margin-left: 2px; 
+        text-align: left; 
+        margin-bottom: 20px; 
+    }
+
+    .header-text h1 {
+        font-size: 50px; 
+    }
+
+   
+    .btn.btn2 {
+        display: inline-block;
+        background: #6A2DFF;
+        padding: 10px 20px;
+        color: #080808;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        width: auto; 
+        max-width: 200px; 
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    
+    .about-section img {
+        width: 75%; 
+        margin-top: 20px; 
+    }
+
+    
+    footer {
+        font-size: 14px;
+    }
+}
+
+/*-------------------------Dark mode-------------*/
+
+/* Default styles (light mode) */
+body {
+    background: var(--background-light);
+    color: var(--text-light);
+}
+
+nav ul li a {
+    color: var(--text-light);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-dark); 
+}
+
+nav.dark-mode ul li a {
+    color: var(--text-dark); 
+}
+
+
+body.dark-mode {
+    background: var(--background-dark);
+    color: var(--text-dark); 
+}
+
+nav.dark-mode {
+    background-color: rgba(168, 144, 255, 0.115); 
+    color: var(--text-dark); 
+}
+
+.about-text .sub-title {
+    color: var(--text-dark); 
+}
+
+
+footer.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark); 
+}
+
+
+button.dark-mode {
+    background-color: var(--primary-dark);
+    color: var(--text-dark); 
+}

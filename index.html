@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible "content=IE-edge>
+    <title>My Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div id ="home"class="container">
+            <nav>
+                <a href="#home">
+                    <img src="images/logo.png" class="logo" alt="Logo">
+                </a>
+                <ul id="sidemenu">
+                    <li><button id="darkModeToggle" class="btn btn2">Change Theme</button></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                
+            </nav>
+            <div class="header-text">
+                
+                <h1>Hi, I'm <span class="name">liza</span>
+                <span class="emoji">👋</span>
+                <br></h1>
+                <div class="about-text">
+                    <div id="typed-text">a future developer with a curious mind,
+                        <br>and a love for creating things that work <br>
+                       <span>beautifully.</span>
+                    </div>
+                </div>
+
+                <a href="images/cv_liza_boukrif_stage.pdf" download target="_blank" class="btn btn2">Download CV</a>
+            
+        </div>
+
+    
+
+    </header>
+<!-------------about----------------->
+   
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/liza.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">LET ME <span class="name">INTRODUCE</span> MYSELF</h1>
+                <br>
+                <p>Hi there! I'm Liza, a passionate Computer Science student with a keen interest in developing innovative solutions. I'm currently focused on expanding my skills in software development and web technologies,
+                 while also diving deep into the world of algorithms and programming.</p>
+                <div class="tab-titles">
+                    <p class="tab-links" onclick="opentab('education')"><span>Education</span></p>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                       
+                        <li>Sophomore (2024-2025)<br>
+                            <span>Sorbonne Université</span>, DANT (Développeur Applications Nouvelles Technologies).</li>
+
+                            <li>Freshman (2023-2024)<br>
+                                <span>Sorbonne Université</span>, Sciences Formelles.</li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div id="skills">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-2">
+                <h1 class="sub-title">What I <span class="name">do</span></h1>
+                <br>
+                <ul>
+                    <li><img src="images/c.png"></li>
+                    <li><img src="images/python.png"></li>
+                    <li><img src="images/html.png"></li>
+                    <li><img src="images/css.png"></li>
+                    <li><img src="images/js.png"></li>
+                    <li><img src="images/java.png"></li>
+                    <li><img src="images/ocaml.png"></li>
+                    <li><img src="images/php.png"></li>
+                    <li><img src="images/bash.png"></li>
+                    <li><img src="images/bootstrap.png"></li>
+                    <li><img src="images/canva.png"></li>
+                    <li><img src="images/wordpress.png"></li>
+                    <li><img src="images/linux.png"></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------projects----------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Recent <span class="name">Works</span></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/project1.png">
+                <div class="layer">
+                    <h3>Movies landing page </h3>
+                    <p>A sleek and modern movie landing page showcasing featured films and TV shows.
+                        Built with <span>HTML , CSS </span>  and <span>JavaScript</span>, the page ensures a responsive design that works well on various devices.</p>
+                    <a href="https://github.com/lizaboukrif/Movies-landing-page" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    
+
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/project2.png">
+                <div class="layer">
+                    <h3>Nyctinasty: Flower Movements</h3>
+                    <p>We analyzed how lotus flowers respond to light and temperature using <span>Python.</span>  We explored data with <span>Pandas</span> and 
+                    <span>Matplotlib</span> and created flower movement visualizations with the <span>Turtle </span>library
+                </p>
+                    <a href="https://are-dynamic-2024-g4.github.io/nyctinastie-lotus/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/project3.png">
+                <div class="layer">
+                    <h3>Finite Automata Simulator</h3>
+                    <p>A<span> Python </span>project that models and visualizes <span> finite automata</span>, including states, transitions, and graphical representations using <span>
+                        Graphviz.</span> 
+                        It helps simulate basic automaton behavior and visualize state transitions</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a href="https://github.com/lizaboukrif?tab=repositories" target="_blank" class="btn">See more</a>
+        </div>
+    </div>
+</div>
+
+
+<!-------------Contact----------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><a href="mailto:boukrifliza04@gmail.com">
+                    <i class="fa-solid fa-paper-plane"></i> boukrifliza04@gmail.com
+                </a></p>
+                <p><a href="tel:(+33)745445492">
+                    <i class="fa-solid fa-phone"></i>(+33)745445492
+                </a></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/liza-boukrif-57212024a/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/lizaboukrif" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+               
+            </div>
+            <div class="contact-right">
+                <form id="contactForm">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <div id="errorMessages" style="color: red; margin-top: 10px;"></div>
+            </div>
+           
+
+        </div>
+
+    </div>
+
+</div>
+                
+
+<footer>Designed and Developped by Liza BOUKRIF Copyright ©2024 LB</footer>
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
